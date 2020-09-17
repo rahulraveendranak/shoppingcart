@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from main.forms import Productform,Categoryform
 from main.models import Product,Category
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -65,7 +66,7 @@ def update_category(request,category_id):
 #user views
 
 #landing views
-
+@login_required
 def index(request):
     context = {}
     return render(request,'index.html',context)
