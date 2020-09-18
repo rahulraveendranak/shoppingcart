@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
-from main.forms import Productform,Categoryform
-from main.models import Product,Category
+from main.forms import Productform,Categoryform,superadminform
+from main.models import Product,Category,superadmin
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import auth
 
 # Create your views here.
 
@@ -68,7 +69,11 @@ def update_category(request,category_id):
 #landing views
 @login_required
 def index(request):
-    context = {}
+    products = Product.objects.all()
+    context = {'products':products }
     return render(request,'index.html',context)
+
+
+
 
 

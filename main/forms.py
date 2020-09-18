@@ -1,5 +1,5 @@
 from django import forms
-from main.models import Product,Category
+from main.models import Product,Category,superadmin
 
 class Productform(forms.ModelForm):
     class Meta:
