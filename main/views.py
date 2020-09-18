@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
-from main.forms import Productform,Categoryform,superadminform
-from main.models import Product,Category,superadmin
+from main.forms import Productform,Categoryform
+from main.models import Product,Category
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import auth
 
