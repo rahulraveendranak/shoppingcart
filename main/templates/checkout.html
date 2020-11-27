@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Checkout{% endblock %}
+{% block activehome %}active{% endblock activehome %}
+{% block content %}
+{% static "images" as baseUrl %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<h1> Checkout</h1>
+
+{% endblock %}

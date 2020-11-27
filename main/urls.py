@@ -14,6 +14,9 @@ urlpatterns = [
     path('delete_category/<int:category_id>/', views.delete_category, name='delete_category'),
     path('update_category/<int:category_id>/', views.update_category, name='update_category'), 
 
+    path('cart/',views.cart,name='cart'),
+    path('checkout/',views.checkout,name='checkout'),
+
 
 
     #user urls
